@@ -13,7 +13,7 @@ const dismissMessageEl = document.getElementById('dismiss-message')
 
 function formSuccess() {
    confirmedMessageEl.classList.add('active')
-   containerEl.classList.add('scucess')
+   containerEl.classList.add('success')
    leftEl.style.display = 'none'
    rightEl.style.display = 'none'
 }

@@ -27,7 +27,7 @@ body {
 
 .container {
    max-width: 955px;
-   margin: 100px auto;
+   margin: 0px auto;
    background-color: var(--white);
    padding: 1.5rem;
    border-radius: 1.5rem;
@@ -130,7 +130,7 @@ body {
 }
 
 .confirmed-message img {
-   width: 80%;
+   width: 80px;
 }
 
 .confirmed-message h2 {
