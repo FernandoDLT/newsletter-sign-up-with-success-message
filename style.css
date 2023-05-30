@@ -2,229 +2,215 @@
 
 :root {
    --tomato: hsl(4, 100%, 67%);
-
    --dark-slate-grey: hsl(234, 29%, 20%);
-   --charcoal-rey: hsl(235, 18%, 26%);
+   --charcoal-grey: hsl(235, 18%, 26%);
    --grey: hsl(231, 7%, 60%);
    --white: hsl(0, 0%, 100%);
 }
 
- * {
+* {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
 }   
 
 body {
-   background-color: var(--charcoal-rey);
-   min-height: 100vh;
-   font-size: 16px;
-   line-height: 1.8;
    font-family: 'Roboto', sans-serif;
-   display: grid;
-   place-content: center;
-}
-
-.container {
-   max-width: 955px;
-   margin: 0px auto;
-   background-color: var(--white);
-   padding: 1.5rem;
-   border-radius: 1.5rem;
-   display: grid;
-   grid-template-columns: 1fr 1fr;
- }
-
- .container.success {
-   display: initial;
-   padding: 3.5rem;
- }
-
- .left {
-   color: var(--dark-slate-grey);
-   padding: 4rem 2rem 2rem 2rem;
- }
-
- .left-info h1 {
-   font-size: 2.9rem;
-   margin-bottom: .5rem;
- }
-
- .left-info p,
- .left-info ul {
-   margin-bottom: 1.5rem;
- }
-
- .left-info ul li {
-   list-style-image: url(assets/images/icon-list.svg);
-   list-style-position: inside;
-}
-
-.left-info ul li::before {
-   content: '';
-   margin-right: .4rem;  /* This is 5rem on his */
-}
-
-.form-item {
    display: flex;
-   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background-color: var(--dark-slate-grey);
 }
 
-.form-item label {
-   font-size: 12px;
-   font-weight: 700;
-   margin-bottom: .5rem;
+.card {
    display: flex;
-   justify-content: space-between;
-}
-
-.form-item label .invalid-email {
-   color: var(--tomato);
-   display: none;
-}
-
-.form-item label .invalid-email.active {
-   display: block;
-}
-
-.form-item input,
-.form-item button {
-   padding: 1rem;
-   margin-bottom: 1.5rem;
-   border-radius: 8px;
-}
-
-.form-item input {
-   border: 1px solid var(--grey);
-}
-
-.form-item input.active {
-   background-color: rgba(255, 98, 87, 0.2);
-   border: 1px solid var(--tomato);
-}
-
-.form-item button {
-   cursor: pointer;
-   background: var(--dark-slate-grey);
-   color: var(--white);
-   font-weight: 700;
-   outline: none;
-   border: none;
-}
-
-.form-item button:hover {
-   background: linear-gradient(127deg, rgba(255, 63, 124, 1) 40%, rgba(255, 154, 34, 1) 70%);
+   width: 800px;
+   background-color: #fff;
+   padding: 30px;
+   border-radius: 20px;
 }
 
 .right {
-   text-align: right;
+   width: 60%;
+   font-size: 16px;
+   margin-top: 40px;
 }
 
-.confirmed-message {
-   display: none;
-   line-height: 1.2;
+.right p {
+   margin: 20px 0 25px;
+   width: 90%;
+   font-weight: 400;
 }
 
-.confirmed-message.active {
-   display: block;
+.left {
+   width: 40%;
 }
 
-.confirmed-message img {
-   width: 80px;
-}
-
-.confirmed-message h2 {
-   font-size: 3rem;
-   margin-top: 2rem;
-}
-
-.confirmed-message p {
-   margin: 2rem 0;
-}
-
-.confirmed-message button {
-   cursor: pointer;
-   background-color: var(--dark-slate-grey);
-   color: var(--white);
-   font-weight: 700;
+.left img {
    width: 100%;
-   padding: 1rem;
-   border-radius: 8px;
-   border: none;
+   margin-left: 15px;
+}
+
+ul {
+   margin-bottom: 20px;
+}
+
+li {
+   margin-bottom: 10px;
+   margin-left: 0;
+   list-style: none;
+}
+
+li img {
+   width: 14px;
+   margin-right: 8px;
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+   width: 300px;
+}
+
+label {
+   font-size: 12px;
+   margin-bottom: 10px; 
+   font-weight: bolder;
+   color: black;
+}
+
+span {
+   margin-left: 100px;
+   text-align: right;
+   padding-left: 10px;
+   display: none;
+}
+
+input {
+   padding: 10px 20px;
+   font-family: inherit;
+   border-radius: 5px;
    outline: none;
+   border: 1px solid var(--grey);
 }
 
-.confirmed-message button:hover {
-   background: linear-gradient(127deg, rgba(255, 63, 124, 1) 40%, rgba(255, 154, 34, 1) 70%);
+input::placeholder {
+   color: var(--grey);
+   font-size: 14px;
 }
 
-#user-email {
-   font-weight: 700;
+.right button {
+   font-family: inherit;
+   margin-top: 20px;
+   padding: 15px 20px;
+   border-radius: 5px;
+   outline: none;
+   color: var(--white);
+   border-radius: 5px;
+   cursor: pointer;
+   background-color: var(--charcoal-grey);
+}
+
+button:hover {
+   background-color: var(--tomato);
+   transition: all .5s;
+   border: none;
+}
+
+h1 {
+   font-size: 50px;
+}
+
+.hide {
+   display: none;
+}
+
+.card-2 {
+   background-color: #fff;
+   width: 450px;
+   padding: 40px;
+   border-radius: 35px;
+}
+
+.card-2 h1 {
+   font-size: 40px;
+   padding: 20px 0;
+}
+
+.card-2 p {
+   font-size: 18px;
+   font-weight: 500;
+   padding-bottom: 10px;
+}
+
+.icon-card-2 {
+   width: 50px;
+}
+
+.card-2 button {
+   width: 100%;
+   font-family: inherit;
+   margin-top: 20px;
+   padding: 15px 20px;
+   outline: none;
+   color: var(--white);
+   background-color: var(--charcoal-grey);
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.card-2 button:hover {
+   background-color: var(--tomato);
 }
 
 @media (max-width: 768px) {
-   body {
-      display: initial;
-      line-height: 1.4;
-   }
-
-   .container {
-      width: 100%;
-      height: initial;
+   .card {
+      flex-direction: column-reverse;
+      width: 95%;
       padding: 0;
-      grid-template-columns: 1fr;    
    }
-
-   .container.success {
-      display: block;
-      padding: initial;
+   
+   body {
+      padding: 0;
+      margin: 0;
    }
-
+   
+   .card h1 {
+      font-size: 38px;
+   }
+   .right {
+      width: 100%;
+      padding: 20px;
+   }
+   
    .left {
-      padding: 1rem 2rem;
-      grid-row: 2;
-   }
-
-   .left-info ul li  {
-      margin-bottom: 1rem;
-   }
-
-   .right img {
       width: 100%;
    }
 
-   .confirmed-message.active {
-      height: 100vh;
-      padding: 14rem 2rem 2rem 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+   .left img {
+      width: 100%;
+      margin: 0;
+      content: url(assets/images/illustration-sign-up-mobile.svg);
    }
 
-   .confirmed-message button {
-      margin-top: auto;
+   li img {
+      width: 15px;
+   }
+
+   form {
+      width: 100%;
+   }
+
+   .card-2 {
+      max-height: 50vh;
+   }
+
+   .card-2 button {
+      min-width: auto;
+   }
+
+   input button {
+      width: 90%;
    }
 }
-
-
-
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   /* .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); } */
